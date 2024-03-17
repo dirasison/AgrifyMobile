@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr format="dimension" name="bottomLeftRadius"/>
+    <attr format="dimension" name="bottomRightRadius"/>
+    <attr format="dimension" name="radius"/>
+    <attr format="dimension" name="topLeftRadius"/>
+    <attr format="dimension" name="topRightRadius"/>
+    <color name="accent">#74AC5F</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="app_name">Agrify</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_home">Home</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
+    <style name="Base.Theme.Agrify" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorOnPrimary">@color/black</item>
+        
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        
+    </style>
+    <style name="Theme.Agrify" parent="Base.Theme.Agrify"/>
+    <declare-styleable name="CodiaRoundFlexboxLayout">
+        <attr name="radius"/>
+        <attr name="topLeftRadius"/>
+        <attr name="topRightRadius"/>
+        <attr name="bottomLeftRadius"/>
+        <attr name="bottomRightRadius"/>
+    </declare-styleable>
+    <declare-styleable name="CodiaRoundFrameLayout">
+        <attr format="dimension" name="widthHeightRadio"/>
+        <attr format="dimension" name="cornerRadius"/>
+        <attr name="topLeftRadius"/>
+        <attr name="topRightRadius"/>
+        <attr name="bottomRightRadius"/>
+        <attr name="bottomLeftRadius"/>
+    </declare-styleable>
+    <declare-styleable name="CodiaRoundImageView">
+        <attr name="radius"/>
+        <attr name="topLeftRadius"/>
+        <attr name="topRightRadius"/>
+        <attr name="bottomLeftRadius"/>
+        <attr name="bottomRightRadius"/>
+    </declare-styleable>
+</resources>

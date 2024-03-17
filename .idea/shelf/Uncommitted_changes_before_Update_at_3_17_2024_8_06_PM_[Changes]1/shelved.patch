@@ -1,0 +1,324 @@
+Index: app/src/main/res/layout/fragment_home.xml
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_home.xml b/app/src/main/res/layout/fragment_home.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/fragment_home.xml	
++++ /dev/null	
+@@ -1,22 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".ui.home.HomeFragment">
+-
+-    <TextView
+-        android:id="@+id/text_home"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="8dp"
+-        android:layout_marginTop="8dp"
+-        android:layout_marginEnd="8dp"
+-        android:textAlignment="center"
+-        android:textSize="20sp"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/agrify/Home.java
+===================================================================
+diff --git a/app/src/main/java/com/example/agrify/Home.java b/app/src/main/java/com/example/agrify/Home.java
+deleted file mode 100644
+--- a/app/src/main/java/com/example/agrify/Home.java	
++++ /dev/null	
+@@ -1,37 +0,0 @@
+-package com.example.agrify;
+-
+-import android.os.Bundle;
+-
+-import com.google.android.material.bottomnavigation.BottomNavigationView;
+-
+-import androidx.appcompat.app.AppCompatActivity;
+-import androidx.navigation.NavController;
+-import androidx.navigation.Navigation;
+-import androidx.navigation.ui.AppBarConfiguration;
+-import androidx.navigation.ui.NavigationUI;
+-
+-import com.example.agrify.databinding.ActivityHomeBinding;
+-
+-public class Home extends AppCompatActivity {
+-
+-    private ActivityHomeBinding binding;
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-
+-        binding = ActivityHomeBinding.inflate(getLayoutInflater());
+-        setContentView(binding.getRoot());
+-
+-        BottomNavigationView navView = findViewById(R.id.nav_view);
+-        // Passing each menu ID as a set of Ids because each
+-        // menu should be considered as top level destinations.
+-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+-                R.id.navigation_home, R.id.navigation_dashboard)
+-                .build();
+-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_home);
+-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+-        NavigationUI.setupWithNavController(binding.navView, navController);
+-    }
+-
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/agrify/ui/home/HomeViewModel.java
+===================================================================
+diff --git a/app/src/main/java/com/example/agrify/ui/home/HomeViewModel.java b/app/src/main/java/com/example/agrify/ui/home/HomeViewModel.java
+deleted file mode 100644
+--- a/app/src/main/java/com/example/agrify/ui/home/HomeViewModel.java	
++++ /dev/null	
+@@ -1,19 +0,0 @@
+-package com.example.agrify.ui.home;
+-
+-import androidx.lifecycle.LiveData;
+-import androidx.lifecycle.MutableLiveData;
+-import androidx.lifecycle.ViewModel;
+-
+-public class HomeViewModel extends ViewModel {
+-
+-    private final MutableLiveData<String> mText;
+-
+-    public HomeViewModel() {
+-        mText = new MutableLiveData<>();
+-        mText.setValue("This is home fragment");
+-    }
+-
+-    public LiveData<String> getText() {
+-        return mText;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_home.xml
+===================================================================
+diff --git a/app/src/main/res/layout/activity_home.xml b/app/src/main/res/layout/activity_home.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/activity_home.xml	
++++ /dev/null	
+@@ -1,34 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout
+-    xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    android:id="@+id/container"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:paddingTop="?attr/actionBarSize">
+-
+-    <com.google.android.material.bottomnavigation.BottomNavigationView
+-        android:id="@+id/nav_view"
+-        android:layout_width="0dp"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="0dp"
+-        android:layout_marginEnd="0dp"
+-        android:background="?android:attr/windowBackground"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:menu="@menu/bottom_nav_menu" />
+-
+-    <fragment
+-        android:id="@+id/nav_host_fragment_activity_home"
+-        android:name="androidx.navigation.fragment.NavHostFragment"
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        app:defaultNavHost="true"
+-        app:layout_constraintBottom_toTopOf="@id/nav_view"
+-        app:layout_constraintLeft_toLeftOf="parent"
+-        app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:navGraph="@navigation/mobile_navigation2" />
+-
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_dashboard.xml
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_dashboard.xml b/app/src/main/res/layout/fragment_dashboard.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/fragment_dashboard.xml	
++++ /dev/null	
+@@ -1,22 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".ui.profile.DashboardFragment">
+-
+-    <TextView
+-        android:id="@+id/text_dashboard"
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="8dp"
+-        android:layout_marginTop="8dp"
+-        android:layout_marginEnd="8dp"
+-        android:textAlignment="center"
+-        android:textSize="20sp"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent" />
+-</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/agrify/ui/profile/DashboardFragment.java
+===================================================================
+diff --git a/app/src/main/java/com/example/agrify/ui/profile/DashboardFragment.java b/app/src/main/java/com/example/agrify/ui/profile/DashboardFragment.java
+deleted file mode 100644
+--- a/app/src/main/java/com/example/agrify/ui/profile/DashboardFragment.java	
++++ /dev/null	
+@@ -1,37 +0,0 @@
+-package com.example.agrify.ui.profile;
+-
+-import android.os.Bundle;
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.ViewGroup;
+-import android.widget.TextView;
+-
+-import androidx.annotation.NonNull;
+-import androidx.fragment.app.Fragment;
+-import androidx.lifecycle.ViewModelProvider;
+-
+-import com.example.agrify.databinding.FragmentDashboardBinding;
+-
+-public class DashboardFragment extends Fragment {
+-
+-    private FragmentDashboardBinding binding;
+-
+-    public View onCreateView(@NonNull LayoutInflater inflater,
+-                             ViewGroup container, Bundle savedInstanceState) {
+-        DashboardViewModel dashboardViewModel =
+-                new ViewModelProvider(this).get(DashboardViewModel.class);
+-
+-        binding = FragmentDashboardBinding.inflate(inflater, container, false);
+-        View root = binding.getRoot();
+-
+-        final TextView textView = binding.textDashboard;
+-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+-        return root;
+-    }
+-
+-    @Override
+-    public void onDestroyView() {
+-        super.onDestroyView();
+-        binding = null;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/res/navigation/mobile_navigation2.xml
+===================================================================
+diff --git a/app/src/main/res/navigation/mobile_navigation2.xml b/app/src/main/res/navigation/mobile_navigation2.xml
+deleted file mode 100644
+--- a/app/src/main/res/navigation/mobile_navigation2.xml	
++++ /dev/null	
+@@ -1,25 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:id="@+id/mobile_navigation2"
+-    app:startDestination="@+id/navigation_home">
+-
+-    <fragment
+-        android:id="@+id/navigation_home"
+-        android:name="com.example.agrify.ui.home.HomeFragment"
+-        android:label="@string/title_home"
+-        tools:layout="@layout/fragment_home" />
+-
+-    <fragment
+-        android:id="@+id/navigation_dashboard"
+-        android:name="com.example.agrify.ui.profile.DashboardFragment"
+-        android:label="@string/title_dashboard"
+-        tools:layout="@layout/fragment_dashboard" />
+-
+-    <fragment
+-        android:id="@+id/navigation_notifications"
+-        android:name="com.example.agrify.ui.notifications.NotificationsFragment"
+-        android:label="@string/title_notifications"
+-        tools:layout="@layout/fragment_notifications" />
+-</navigation>
+\ No newline at end of file
+Index: app/src/main/java/com/example/agrify/ui/home/HomeFragment.java
+===================================================================
+diff --git a/app/src/main/java/com/example/agrify/ui/home/HomeFragment.java b/app/src/main/java/com/example/agrify/ui/home/HomeFragment.java
+deleted file mode 100644
+--- a/app/src/main/java/com/example/agrify/ui/home/HomeFragment.java	
++++ /dev/null	
+@@ -1,37 +0,0 @@
+-package com.example.agrify.ui.home;
+-
+-import android.os.Bundle;
+-import android.view.LayoutInflater;
+-import android.view.View;
+-import android.view.ViewGroup;
+-import android.widget.TextView;
+-
+-import androidx.annotation.NonNull;
+-import androidx.fragment.app.Fragment;
+-import androidx.lifecycle.ViewModelProvider;
+-
+-import com.example.agrify.databinding.FragmentHomeBinding;
+-
+-public class HomeFragment extends Fragment {
+-
+-    private FragmentHomeBinding binding;
+-
+-    public View onCreateView(@NonNull LayoutInflater inflater,
+-                             ViewGroup container, Bundle savedInstanceState) {
+-        HomeViewModel homeViewModel =
+-                new ViewModelProvider(this).get(HomeViewModel.class);
+-
+-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+-        View root = binding.getRoot();
+-
+-        final TextView textView = binding.textHome;
+-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+-        return root;
+-    }
+-
+-    @Override
+-    public void onDestroyView() {
+-        super.onDestroyView();
+-        binding = null;
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/java/com/example/agrify/ui/profile/DashboardViewModel.java
+===================================================================
+diff --git a/app/src/main/java/com/example/agrify/ui/profile/DashboardViewModel.java b/app/src/main/java/com/example/agrify/ui/profile/DashboardViewModel.java
+deleted file mode 100644
+--- a/app/src/main/java/com/example/agrify/ui/profile/DashboardViewModel.java	
++++ /dev/null	
+@@ -1,19 +0,0 @@
+-package com.example.agrify.ui.profile;
+-
+-import androidx.lifecycle.LiveData;
+-import androidx.lifecycle.MutableLiveData;
+-import androidx.lifecycle.ViewModel;
+-
+-public class DashboardViewModel extends ViewModel {
+-
+-    private final MutableLiveData<String> mText;
+-
+-    public DashboardViewModel() {
+-        mText = new MutableLiveData<>();
+-        mText.setValue("This is dashboard fragment");
+-    }
+-
+-    public LiveData<String> getText() {
+-        return mText;
+-    }
+-}
+\ No newline at end of file

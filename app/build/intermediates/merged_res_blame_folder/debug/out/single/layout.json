@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.example.agrify.app-mergeDebugResources-44:/layout/activity_add_to_cart.xml",
+        "source": "com.example.agrify.app-main-47:/layout/activity_add_to_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-mergeDebugResources-44:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-main-47:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-mergeDebugResources-44:\\layout\\activity_main2.xml",
+        "source": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-main-47:\\layout\\activity_main2.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-mergeDebugResources-44:\\layout\\activity_splash_screen.xml",
+        "source": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-main-47:\\layout\\activity_splash_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-mergeDebugResources-44:\\layout\\activity_add_to_cart.xml",
+        "source": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-main-47:\\layout\\activity_add_to_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-mergeDebugResources-44:\\layout\\fragment_profile_fragment.xml",
+        "source": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-main-47:\\layout\\fragment_profile_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-mergeDebugResources-44:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-main-47:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-mergeDebugResources-44:\\layout\\fetching_data_dialog.xml",
+        "source": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-main-47:\\layout\\fetching_data_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-mergeDebugResources-44:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\asus\\.gradle\\daemon\\8.2\\com.example.agrify.app-main-47:\\layout\\activity_main.xml"
+    }
+]

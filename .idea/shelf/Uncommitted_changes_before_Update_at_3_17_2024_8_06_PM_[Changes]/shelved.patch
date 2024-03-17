@@ -1,0 +1,459 @@
+Index: app/src/main/res/layout/activity_register.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:background=\"#F9F9F7\"\r\n    tools:context=\".Register\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/title\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Register an account\"\r\n        android:textSize=\"24sp\"\r\n        android:textStyle=\"bold\"\r\n        android:textColor=\"#000\"\r\n        android:layout_marginTop=\"50dp\"\r\n        android:layout_centerHorizontal=\"true\"/>\r\n\r\n    <TextView\r\n        android:id=\"@+id/secondtitle\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"hurry and get new user details.\"\r\n        android:layout_below=\"@id/title\"\r\n        android:textSize=\"15sp\"\r\n        android:textColor=\"#000\"\r\n        android:layout_centerHorizontal=\"true\"/>\r\n\r\n    <EditText\r\n        android:id=\"@+id/birthdayEditText\"\r\n        android:layout_width=\"358dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:background=\"@drawable/rectangle_drawable\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:hint=\"Birthday\"\r\n        android:textColorHint=\"#000\"\r\n        android:textColor=\"#000\"\r\n        android:paddingStart=\"16dp\"\r\n        android:paddingEnd=\"16dp\"\r\n        android:layout_below=\"@id/fullnameEditText\"\r\n        android:inputType=\"date\"/>\r\n\r\n    <EditText\r\n        android:id=\"@+id/fullnameEditText\"\r\n        android:layout_width=\"358dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_below=\"@id/secondtitle\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:background=\"@drawable/rectangle_drawable\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:hint=\"Fullname\"\r\n        android:textColorHint=\"#000\"\r\n        android:textColor=\"#000\"\r\n        android:paddingStart=\"16dp\"\r\n        android:inputType=\"text\"\r\n        android:paddingEnd=\"16dp\" />\r\n\r\n    <EditText\r\n        android:id=\"@+id/emailEditText\"\r\n        android:layout_width=\"358dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:background=\"@drawable/rectangle_drawable\"\r\n        android:hint=\"Email-Address\"\r\n        android:inputType=\"text\"\r\n        android:textColorHint=\"#000\"\r\n        android:textColor=\"#000\"\r\n        android:paddingStart=\"16dp\"\r\n        android:layout_below=\"@id/birthdayEditText\"\r\n        android:paddingEnd=\"16dp\"/>\r\n\r\n    <EditText\r\n        android:id=\"@+id/passwordEditText\"\r\n        android:layout_width=\"358dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:background=\"@drawable/rectangle_drawable\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:hint=\"Password\"\r\n        android:textColorHint=\"#000\"\r\n        android:textColor=\"#000\"\r\n        android:paddingStart=\"16dp\"\r\n        android:layout_below=\"@id/phoneNumberEditText\"\r\n        android:paddingEnd=\"16dp\"/>\r\n\r\n    <EditText\r\n        android:id=\"@+id/phoneNumberEditText\"\r\n        android:layout_width=\"358dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:background=\"@drawable/rectangle_drawable\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:hint=\"Phone Number\"\r\n        android:textColorHint=\"#000\"\r\n        android:textColor=\"#000\"\r\n        android:paddingStart=\"16dp\"\r\n        android:layout_below=\"@id/emailEditText\"\r\n        android:paddingEnd=\"16dp\"\r\n        android:inputType=\"number\"/>\r\n\r\n\r\n    <Button\r\n        android:id=\"@+id/btnRegister\"\r\n        android:layout_width=\"358dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_below=\"@id/passwordEditText\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"120dp\"\r\n        android:text=\"Register\"\r\n        android:textColor=\"#FFF\"\r\n        android:textStyle=\"bold\"\r\n        android:background=\"@drawable/rounded_color\"/>\r\n\r\n    <CheckBox\r\n        android:id=\"@+id/checkBox\"\r\n        android:layout_width=\"358dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:textColor=\"@color/black\"\r\n        android:layout_below=\"@id/passwordEditText\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:text=\"By Signing up, I agree with Terms and conditions\" />\r\n\r\n</RelativeLayout>\r\n
+===================================================================
+diff --git a/app/src/main/res/layout/activity_register.xml b/app/src/main/res/layout/activity_register.xml
+--- a/app/src/main/res/layout/activity_register.xml	
++++ b/app/src/main/res/layout/activity_register.xml	
+@@ -27,30 +27,32 @@
+         android:textColor="#000"
+         android:layout_centerHorizontal="true"/>
+ 
++
++
+     <EditText
+-        android:id="@+id/birthdayEditText"
++        android:id="@+id/firstnameEditText"
+         android:layout_width="358dp"
+         android:layout_height="60dp"
++        android:layout_below="@id/secondtitle"
+         android:layout_centerHorizontal="true"
+         android:background="@drawable/rectangle_drawable"
+         android:layout_marginTop="20dp"
+-        android:hint="Birthday"
++        android:hint="First Name"
+         android:textColorHint="#000"
+         android:textColor="#000"
+         android:paddingStart="16dp"
+-        android:paddingEnd="16dp"
+-        android:layout_below="@id/fullnameEditText"
+-        android:inputType="date"/>
++        android:inputType="text"
++        android:paddingEnd="16dp" />
+ 
+     <EditText
+-        android:id="@+id/fullnameEditText"
++        android:id="@+id/lastnameEditText"
+         android:layout_width="358dp"
+         android:layout_height="60dp"
+-        android:layout_below="@id/secondtitle"
++        android:layout_below="@id/firstnameEditText"
+         android:layout_centerHorizontal="true"
+         android:background="@drawable/rectangle_drawable"
+         android:layout_marginTop="20dp"
+-        android:hint="Fullname"
++        android:hint="Last Name"
+         android:textColorHint="#000"
+         android:textColor="#000"
+         android:paddingStart="16dp"
+@@ -69,7 +71,7 @@
+         android:textColorHint="#000"
+         android:textColor="#000"
+         android:paddingStart="16dp"
+-        android:layout_below="@id/birthdayEditText"
++        android:layout_below="@id/lastnameEditText"
+         android:paddingEnd="16dp"/>
+ 
+     <EditText
+@@ -82,25 +84,11 @@
+         android:hint="Password"
+         android:textColorHint="#000"
+         android:textColor="#000"
++        android:inputType="textPassword"
+         android:paddingStart="16dp"
+-        android:layout_below="@id/phoneNumberEditText"
++        android:layout_below="@id/emailEditText"
+         android:paddingEnd="16dp"/>
+ 
+-    <EditText
+-        android:id="@+id/phoneNumberEditText"
+-        android:layout_width="358dp"
+-        android:layout_height="60dp"
+-        android:layout_centerHorizontal="true"
+-        android:background="@drawable/rectangle_drawable"
+-        android:layout_marginTop="20dp"
+-        android:hint="Phone Number"
+-        android:textColorHint="#000"
+-        android:textColor="#000"
+-        android:paddingStart="16dp"
+-        android:layout_below="@id/emailEditText"
+-        android:paddingEnd="16dp"
+-        android:inputType="number"/>
+-
+ 
+     <Button
+         android:id="@+id/btnRegister"
+Index: app/src/main/java/com/example/agrify/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.agrify;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.annotation.SuppressLint;\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\n\r\npublic class MainActivity extends AppCompatActivity {\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_main);\r\n\r\n        @SuppressLint({\"MissingInflatedId\", \"LocalSuppress\"})\r\n        Button button = findViewById(R.id.btnStart);\r\n        button.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(MainActivity.this, Register.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n    }\r\n}
+===================================================================
+diff --git a/app/src/main/java/com/example/agrify/MainActivity.java b/app/src/main/java/com/example/agrify/MainActivity.java
+--- a/app/src/main/java/com/example/agrify/MainActivity.java	
++++ b/app/src/main/java/com/example/agrify/MainActivity.java	
+@@ -20,7 +20,7 @@
+         button.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+-                Intent intent = new Intent(MainActivity.this, Register.class);
++                Intent intent = new Intent(MainActivity.this,Register.class);
+                 startActivity(intent);
+             }
+         });
+Index: app/src/main/java/com/example/agrify/Register.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.agrify;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.annotation.SuppressLint;\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\n\r\npublic class Register extends AppCompatActivity {\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_register);\r\n        @SuppressLint({\"MissingInflatedId\", \"LocalSuppress\"})\r\n        Button button = findViewById(R.id.btnRegister);\r\n        button.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(Register.this, Login.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n    }\r\n}
+===================================================================
+diff --git a/app/src/main/java/com/example/agrify/Register.java b/app/src/main/java/com/example/agrify/Register.java
+--- a/app/src/main/java/com/example/agrify/Register.java	
++++ b/app/src/main/java/com/example/agrify/Register.java	
+@@ -1,26 +1,84 @@
+ package com.example.agrify;
+ 
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.annotation.SuppressLint;
+ import android.content.Intent;
+ import android.os.Bundle;
+ import android.view.View;
+ import android.widget.Button;
++import android.widget.EditText;
++import android.widget.Toast;
++import androidx.appcompat.app.AppCompatActivity;
++import retrofit2.Call;
++import retrofit2.Callback;
++import retrofit2.Response;
+ 
+ public class Register extends AppCompatActivity {
+ 
++    private EditText firstName;
++    private EditText lastName;
++    private EditText userEmail;
++    private EditText userPassword;
++
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_register);
+-        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
++
++        firstName = findViewById(R.id.firstnameEditText);
++        lastName = findViewById(R.id.lastnameEditText);
++        userEmail = findViewById(R.id.emailEditText);
++        userPassword = findViewById(R.id.passwordEditText);
++
+         Button button = findViewById(R.id.btnRegister);
+         button.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+-                Intent intent = new Intent(Register.this, Login.class);
+-                startActivity(intent);
++                String firstNameText = firstName.getText().toString().trim();
++                String lastNameText = lastName.getText().toString().trim();
++                String userEmailText = userEmail.getText().toString().trim();
++                String userPasswordText = userPassword.getText().toString().trim();
++
++                if (firstNameText.isEmpty()) {
++                    firstName.setError("First Name Required");
++                    firstName.requestFocus();
++                    return;
++                }
++                if (lastNameText.isEmpty()) {
++                    lastName.setError("Last Name Required");
++                    lastName.requestFocus();
++                    return;
++                }
++                if (userEmailText.isEmpty()) {
++                    userEmail.setError("Email Required");
++                    userEmail.requestFocus();
++                    return;
++                }
++                if (userPasswordText.isEmpty()) {
++                    userPassword.setError("Password Required");
++                    userPassword.requestFocus();
++                    return;
++                }
++
++                Call<RegisterResponse> call = RetrofitClient.instance.registerUser(firstNameText, lastNameText, userEmailText, userPasswordText);
++                call.enqueue(new Callback<RegisterResponse>() {
++                    @Override
++                    public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
++                        if (response.isSuccessful()) {
++                            Intent intent = new Intent(Register.this, Login.class);
++                            startActivity(intent);
++                            RegisterResponse registerResponse = response.body();
++                            if (registerResponse != null && registerResponse.isSuccess()) {
++                                // Registration successful, navigate to the login activity
++                               // Finish the current activity to prevent the user from going back
++                            }
++                        }
++                    }
++
++                    @Override
++                    public void onFailure(Call<RegisterResponse> call, Throwable t) {
++                        // Network error, show an error message
++                        Toast.makeText(Register.this, "Network error. Please check your internet connection.", Toast.LENGTH_SHORT).show();
++                    }
++                });
+             }
+         });
+     }
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n    <RelativeLayout\r\n        xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n        xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n        xmlns:tools=\"http://schemas.android.com/tools\"\r\n        android:id=\"@+id/container_welcome\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:background=\"@color/white\"\r\n        tools:context=\".MainActivity\">\r\n\r\n        <Button\r\n            android:id=\"@+id/btnStart\"\r\n            android:layout_width=\"350dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginLeft=\"36dp\"\r\n            android:layout_marginTop=\"700dp\"\r\n            android:padding=\"19dp\"\r\n            android:layout_gravity=\"top|left\"\r\n            android:background=\"@drawable/rounded_color\"\r\n            android:text=\"Start\"\r\n            android:textColor=\"@android:color/white\" />/>\r\n\r\n        <TextView\r\n            android:id=\"@+id/txt_plant_prosperity\"\r\n            android:layout_width=\"368dp\"\r\n            android:layout_height=\"42dp\"\r\n            android:layout_marginLeft=\"31dp\"\r\n            android:layout_marginTop=\"490dp\"\r\n            android:layout_gravity=\"top|left\"\r\n            android:gravity=\"center_horizontal|center_vertical\"\r\n            android:includeFontPadding=\"false\"\r\n            android:maxLines=\"1\"\r\n            android:singleLine=\"true\"\r\n            android:text=\"Plant Prosperity, \"\r\n            android:textColor=\"#FF000000\"\r\n            android:textSize=\"30dp\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/txt_harvest_convenience\"\r\n            android:layout_width=\"447dp\"\r\n            android:layout_height=\"107dp\"\r\n            android:layout_marginLeft=\"-8dp\"\r\n            android:layout_marginTop=\"530dp\"\r\n            android:layout_gravity=\"top|left\"\r\n            android:gravity=\"center_horizontal|top\"\r\n            android:includeFontPadding=\"false\"\r\n            android:lineHeight=\"10dp\"\r\n            android:text=\"Harvest Convenience\"\r\n            android:textColor=\"#FF000000\"\r\n            android:textSize=\"30sp\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/txt_empower_journey\"\r\n            android:layout_width=\"324dp\"\r\n            android:layout_height=\"104dp\"\r\n            android:layout_marginLeft=\"53dp\"\r\n            android:layout_marginTop=\"570dp\"\r\n            android:layout_gravity=\"top|left\"\r\n            android:gravity=\"center_horizontal|top\"\r\n            android:includeFontPadding=\"false\"\r\n            android:lineHeight=\"21dp\"\r\n            android:text=\"Empower your farm-to-table journey, bringing the convenience of online shopping to the heart of the fields\"\r\n            android:textColor=\"#FF000000\"\r\n            android:textSize=\"14sp\" />\r\n\r\n    <ImageView\r\n        android:id=\"@+id/img_farmer_amico\"\r\n        android:layout_width=\"500sp\"\r\n        android:layout_height=\"500sp\"\r\n        android:layout_gravity=\"top|left\"\r\n        android:layout_marginLeft=\"-38dp\"\r\n        android:layout_marginTop=\"0dp\"\r\n        android:scaleType=\"centerInside\"\r\n        android:src=\"@drawable/farmer_amico\" />\r\n\r\n\r\n\r\n</RelativeLayout>\r\n\r\n\r\n\r\n
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	
++++ b/app/src/main/res/layout/activity_main.xml	
+@@ -14,12 +14,12 @@
+             android:layout_width="350dp"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="36dp"
+-            android:layout_marginTop="700dp"
++            android:layout_marginTop="650dp"
+             android:padding="19dp"
+             android:layout_gravity="top|left"
+             android:background="@drawable/rounded_color"
+             android:text="Start"
+-            android:textColor="@android:color/white" />/>
++            android:textColor="@android:color/white" />
+ 
+         <TextView
+             android:id="@+id/txt_plant_prosperity"
+@@ -75,7 +75,6 @@
+         android:src="@drawable/farmer_amico" />
+ 
+ 
+-
+ </RelativeLayout>
+ 
+ 
+Index: app/src/main/res/menu/bottom_nav_menu.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<menu xmlns:android=\"http://schemas.android.com/apk/res/android\">\r\n\r\n    <item\r\n        android:id=\"@+id/navigation_home\"\r\n        android:icon=\"@drawable/home\"\r\n        android:title=\"@string/title_home\" />\r\n\r\n    <item\r\n        android:id=\"@+id/navigation_dashboard\"\r\n        android:icon=\"@drawable/user\"\r\n        android:title=\"Profile\" />\r\n\r\n\r\n\r\n</menu>
+===================================================================
+diff --git a/app/src/main/res/menu/bottom_nav_menu.xml b/app/src/main/res/menu/bottom_nav_menu.xml
+--- a/app/src/main/res/menu/bottom_nav_menu.xml	
++++ b/app/src/main/res/menu/bottom_nav_menu.xml	
+@@ -2,14 +2,14 @@
+ <menu xmlns:android="http://schemas.android.com/apk/res/android">
+ 
+     <item
+-        android:id="@+id/navigation_home"
++        android:id="@+id/homeFrag"
+         android:icon="@drawable/home"
+-        android:title="@string/title_home" />
++        android:title="Home"/>
+ 
+     <item
+-        android:id="@+id/navigation_dashboard"
++        android:id="@+id/profileFrag"
+         android:icon="@drawable/user"
+-        android:title="Profile" />
++        android:title="Profile"/>
+ 
+ 
+ 
+Index: app/build.gradle.kts
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id(\"com.android.application\")\r\n}\r\n\r\nandroid {\r\n    namespace = \"com.example.agrify\"\r\n    compileSdk = 34\r\n\r\n    defaultConfig {\r\n        applicationId = \"com.example.agrify\"\r\n        minSdk = 24\r\n        targetSdk = 34\r\n        versionCode = 1\r\n        versionName = \"1.0\"\r\n\r\n        testInstrumentationRunner = \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n\r\n    buildTypes {\r\n        release {\r\n            isMinifyEnabled = false\r\n            proguardFiles(\r\n                getDefaultProguardFile(\"proguard-android-optimize.txt\"),\r\n                \"proguard-rules.pro\"\r\n            )\r\n        }\r\n    }\r\n    compileOptions {\r\n        sourceCompatibility = JavaVersion.VERSION_1_8\r\n        targetCompatibility = JavaVersion.VERSION_1_8\r\n    }\r\n    buildFeatures {\r\n        viewBinding = true\r\n    }\r\n}\r\n\r\ndependencies {\r\n    implementation(\"com.squareup.retrofit2:retrofit:2.9.0\")\r\n    implementation(\"androidx.appcompat:appcompat:1.6.1\")\r\n    implementation(\"com.google.android.material:material:1.11.0\")\r\n    implementation(\"androidx.constraintlayout:constraintlayout:2.1.4\")\r\n    implementation(\"androidx.lifecycle:lifecycle-livedata-ktx:2.7.0\")\r\n    implementation(\"androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0\")\r\n    implementation(\"androidx.navigation:navigation-fragment:2.6.0\")\r\n    implementation(\"androidx.navigation:navigation-ui:2.6.0\")\r\n    testImplementation(\"junit:junit:4.13.2\")\r\n    androidTestImplementation(\"androidx.test.ext:junit:1.1.5\")\r\n    androidTestImplementation(\"androidx.test.espresso:espresso-core:3.5.1\")\r\n}
+===================================================================
+diff --git a/app/build.gradle.kts b/app/build.gradle.kts
+--- a/app/build.gradle.kts	
++++ b/app/build.gradle.kts	
+@@ -36,14 +36,20 @@
+ 
+ dependencies {
+     implementation("com.squareup.retrofit2:retrofit:2.9.0")
++    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+     implementation("androidx.appcompat:appcompat:1.6.1")
+     implementation("com.google.android.material:material:1.11.0")
+     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+-    implementation("androidx.navigation:navigation-fragment:2.6.0")
+-    implementation("androidx.navigation:navigation-ui:2.6.0")
++    implementation("androidx.navigation:navigation-fragment:2.7.7")
++    implementation("androidx.navigation:navigation-ui:2.7.7")
+     testImplementation("junit:junit:4.13.2")
+     androidTestImplementation("androidx.test.ext:junit:1.1.5")
+     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
++
++    implementation ("de.hdodenhof:circleimageview:3.1.0")
++    implementation("com.squareup.okhttp3:logging-interceptor:4.9.2")
++    implementation ("com.squareup.okhttp3:okhttp:4.9.2")
++    implementation("com.google.code.gson:gson:2.10.1")
+ }
+\ No newline at end of file
+Index: .idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"deploymentTargetDropDown\">\r\n    <value>\r\n      <entry key=\"app\">\r\n        <State />\r\n      </entry>\r\n    </value>\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+--- a/.idea/deploymentTargetDropDown.xml	
++++ b/.idea/deploymentTargetDropDown.xml	
+@@ -2,6 +2,18 @@
+ <project version="4">
+   <component name="deploymentTargetDropDown">
+     <value>
++      <entry key="AgrifyV2.app">
++        <State />
++      </entry>
++      <entry key="AgrifyV2.app.androidTest">
++        <State />
++      </entry>
++      <entry key="AgrifyV2.app.main">
++        <State />
++      </entry>
++      <entry key="AgrifyV2.app.unitTest">
++        <State />
++      </entry>
+       <entry key="app">
+         <State />
+       </entry>
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.Agrify\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".Home\"\r\n            android:exported=\"false\"\r\n            android:label=\"@string/title_activity_home\" />\r\n        <activity\r\n            android:name=\".Login\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".SplashScreen\"\r\n            android:exported=\"true\">\r\n            <meta-data\r\n                android:name=\"android.app.lib_name\"\r\n                android:value=\"\" />\r\n\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n        <activity\r\n            android:name=\".Register\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"true\" />\r\n    </application>\r\n\r\n</manifest>
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	
++++ b/app/src/main/AndroidManifest.xml	
+@@ -15,9 +15,11 @@
+         android:theme="@style/Theme.Agrify"
+         tools:targetApi="31">
+         <activity
+-            android:name=".Home"
+-            android:exported="false"
+-            android:label="@string/title_activity_home" />
++            android:name=".AddToCart"
++            android:exported="false" />
++        <activity
++            android:name=".MainActivity2"
++            android:exported="false" />
+         <activity
+             android:name=".Login"
+             android:exported="false" />
+Index: app/src/main/res/layout/activity_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<RelativeLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@color/white\"\r\n    tools:context=\".Login\">\r\n\r\n    <TextView\r\n        android:id=\"@+id/title\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Log in your account\"\r\n        android:textSize=\"24sp\"\r\n        android:textStyle=\"bold\"\r\n        android:textColor=\"#000\"\r\n        android:layout_marginTop=\"50dp\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        tools:ignore=\"MissingConstraints\" />\r\n\r\n    <TextView\r\n        android:id=\"@+id/secondtitle\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"new vouchers just for you\"\r\n        android:layout_below=\"@id/title\"\r\n        android:textSize=\"15sp\"\r\n        android:textColor=\"#000\"\r\n        android:layout_centerHorizontal=\"true\"/>\r\n\r\n    <EditText\r\n        android:id=\"@+id/emailEditText\"\r\n        android:layout_width=\"358dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"70dp\"\r\n        android:background=\"@drawable/rectangle_drawable\"\r\n        android:hint=\"Email-Address\"\r\n        android:inputType=\"text\"\r\n        android:textColorHint=\"#000\"\r\n        android:textColor=\"#000\"\r\n        android:paddingStart=\"16dp\"\r\n        android:layout_below=\"@id/secondtitle\"\r\n        android:paddingEnd=\"16dp\"/>\r\n\r\n    <EditText\r\n        android:id=\"@+id/passwordEditText\"\r\n        android:layout_width=\"358dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:background=\"@drawable/rectangle_drawable\"\r\n        android:layout_marginTop=\"20dp\"\r\n        android:hint=\"Password\"\r\n        android:textColorHint=\"#000\"\r\n        android:textColor=\"#000\"\r\n        android:paddingStart=\"16dp\"\r\n        android:layout_below=\"@id/emailEditText\"\r\n        android:paddingEnd=\"16dp\"/>\r\n\r\n    <Button\r\n        android:id=\"@+id/btnLogin\"\r\n        android:layout_width=\"358dp\"\r\n        android:layout_height=\"60dp\"\r\n        android:layout_below=\"@id/passwordEditText\"\r\n        android:layout_centerHorizontal=\"true\"\r\n        android:layout_marginTop=\"10dp\"\r\n        android:text=\"Log in\"\r\n        android:textColor=\"#FFF\"\r\n        android:textStyle=\"bold\"\r\n        android:background=\"@drawable/rounded_color\"/>\r\n\r\n\r\n\r\n\r\n</RelativeLayout>
+===================================================================
+diff --git a/app/src/main/res/layout/activity_login.xml b/app/src/main/res/layout/activity_login.xml
+--- a/app/src/main/res/layout/activity_login.xml	
++++ b/app/src/main/res/layout/activity_login.xml	
+@@ -54,6 +54,7 @@
+         android:hint="Password"
+         android:textColorHint="#000"
+         android:textColor="#000"
++        android:inputType="textPassword"
+         android:paddingStart="16dp"
+         android:layout_below="@id/emailEditText"
+         android:paddingEnd="16dp"/>
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">Agrify</string>\r\n    <string name=\"title_activity_home\">Home</string>\r\n    <string name=\"title_home\">Home</string>\r\n    <string name=\"title_dashboard\">Dashboard</string>\r\n    <string name=\"title_notifications\">Notifications</string>\r\n    <!-- TODO: Remove or change this placeholder text -->\r\n    <string name=\"hello_blank_fragment\">Hello blank fragment</string>\r\n</resources>
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	
++++ b/app/src/main/res/values/strings.xml	
+@@ -6,4 +6,7 @@
+     <string name="title_notifications">Notifications</string>
+     <!-- TODO: Remove or change this placeholder text -->
+     <string name="hello_blank_fragment">Hello blank fragment</string>
++    <string name="profile">Profile</string>
++    <string name="todo">TODO</string>
++    <string name="todo1">TODO</string>
+ </resources>
+\ No newline at end of file
+Index: app/src/main/java/com/example/agrify/Login.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.agrify;\r\n\r\nimport androidx.appcompat.app.AppCompatActivity;\r\n\r\nimport android.annotation.SuppressLint;\r\nimport android.content.Intent;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Button;\r\n\r\npublic class Login extends AppCompatActivity {\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.activity_login);\r\n\r\n        @SuppressLint({\"MissingInflatedId\", \"LocalSuppress\"})\r\n        Button button = findViewById(R.id.btnLogin);\r\n        button.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View view) {\r\n                Intent intent = new Intent(Login.this, Home.class);\r\n                startActivity(intent);\r\n            }\r\n        });\r\n    }\r\n}
+===================================================================
+diff --git a/app/src/main/java/com/example/agrify/Login.java b/app/src/main/java/com/example/agrify/Login.java
+--- a/app/src/main/java/com/example/agrify/Login.java	
++++ b/app/src/main/java/com/example/agrify/Login.java	
+@@ -1,27 +1,68 @@
+ package com.example.agrify;
+-
+-import androidx.appcompat.app.AppCompatActivity;
+-
+-import android.annotation.SuppressLint;
+ import android.content.Intent;
+ import android.os.Bundle;
+ import android.view.View;
+ import android.widget.Button;
++import android.widget.EditText;
++import android.widget.Toast;
++import androidx.appcompat.app.AppCompatActivity;
++import retrofit2.Call;
++import retrofit2.Callback;
++import retrofit2.Response;
+ 
+ public class Login extends AppCompatActivity {
+ 
++    private EditText editTextEmail;
++    private EditText editTextPassword;
++
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_login);
+ 
+-        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
++        editTextEmail = findViewById(R.id.emailEditText);
++        editTextPassword = findViewById(R.id.passwordEditText);
++
+         Button button = findViewById(R.id.btnLogin);
+         button.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View view) {
+-                Intent intent = new Intent(Login.this, Home.class);
+-                startActivity(intent);
++                String email = editTextEmail.getText().toString().trim();
++                String password = editTextPassword.getText().toString().trim();
++
++                if (email.isEmpty()) {
++                    editTextEmail.setError("Email Required");
++                    editTextEmail.requestFocus();
++                    return;
++                }
++                if (password.isEmpty()) {
++                    editTextPassword.setError("Password Required");
++                    editTextPassword.requestFocus();
++                    return;
++                }
++
++
++                // Make the Retrofit call to authenticate the user
++                Call<LoginResponse> call = RetrofitClient.instance.loginUser(email, password);
++                call.enqueue(new Callback<LoginResponse>() {
++                    @Override
++                    public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
++                        if (response.isSuccessful()) {
++                            Intent intent = new Intent(Login.this, MainActivity2.class);
++                            startActivity(intent);
++                            LoginResponse loginResponse = response.body();
++                            if (loginResponse != null && loginResponse.isSuccess()) {
++                                // Authentication successful, navigate to the home activity
++
++                            }
++                        }
++                    }
++                    @Override
++                    public void onFailure(Call<LoginResponse> call, Throwable t) {
++                        // Network error, show an error message
++                        Toast.makeText(Login.this, "Network error. Please check your internet connection.", Toast.LENGTH_SHORT).show();
++                    }
++                });
+             }
+         });
+     }
